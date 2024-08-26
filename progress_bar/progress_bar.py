@@ -3,7 +3,7 @@ from tqdm.asyncio import tqdm as atqdm
 from colorama import Fore,Style 
 
 def get_default_format(bar_color):
-    return f"{{l_bar}}{Style.RESET_ALL}{bar_color}{{bar}}{Style.RESET_ALL}| {{n_fmt}}/{{total_fmt}} {bar_color}[{Style.RESET_ALL}{Fore.YELLOW}{{elapsed}}{bar_color}<{Style.RESET_ALL}{Fore.YELLOW}{{remaining}}{bar_color},{Fore.YELLOW}{{rate_fmt}} {{postfix}}{Style.RESET_ALL}{bar_color}]{Style.RESET_ALL}"
+    return f"{{l_bar}}{Style.RESET_ALL}{bar_color}{{bar}}{Style.RESET_ALL}| {{n_fmt}}/{{total_fmt}} {bar_color}[{Style.RESET_ALL}{Fore.YELLOW}{{elapsed}}{bar_color}<{Style.RESET_ALL}{Fore.YELLOW}{{remaining}}{bar_color},{Fore.YELLOW}{{rate_fmt}}{{postfix}}{Style.RESET_ALL}{bar_color}]{Style.RESET_ALL}"
 
 def get_progress_bar(iterable, desc="Processing", total=None, mininterval=0.1, disable=False,bar_color=None, bar_format=None, ascii=None):
     ascii=ascii if ascii else "░█"
